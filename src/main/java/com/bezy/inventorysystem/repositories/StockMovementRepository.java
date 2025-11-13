@@ -1,4 +1,7 @@
 package com.bezy.inventorysystem.repositories;
 
-public interface StockMovementRepository extends org.springframework.data.jpa.repository.JpaRepository<com.bezy.inventorysystem.entities.StockMovement, java.lang.Long> {
-  }
+import com.bezy.inventorysystem.entities.StockMovement;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface StockMovementRepository extends JpaRepository<StockMovement, Long> {
+}

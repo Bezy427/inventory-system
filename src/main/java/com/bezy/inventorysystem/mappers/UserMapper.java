@@ -1,4 +1,4 @@
-package com.bezy.inventorysystem;
+package com.bezy.inventorysystem.mappers;
 
 import com.bezy.inventorysystem.dtos.RegisterUserRequest;
 import com.bezy.inventorysystem.dtos.UpdateUserRequest;

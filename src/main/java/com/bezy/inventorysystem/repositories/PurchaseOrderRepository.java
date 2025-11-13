@@ -1,4 +1,7 @@
 package com.bezy.inventorysystem.repositories;
 
-public interface PurchaseOrderRepository extends org.springframework.data.jpa.repository.JpaRepository<com.bezy.inventorysystem.entities.PurchaseOrder, java.lang.Long> {
-  }
+import com.bezy.inventorysystem.entities.PurchaseOrder;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface PurchaseOrderRepository extends JpaRepository<PurchaseOrder, Long> {
+}

@@ -1,4 +1,6 @@
 package com.bezy.inventorysystem.entities;
 
-public class Role {
+public enum Role {
+    ADMIN,
+    CASHIER,
 }

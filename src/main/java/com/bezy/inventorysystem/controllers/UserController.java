@@ -1,5 +1,6 @@
 package com.bezy.inventorysystem.controllers;
 
+import com.bezy.inventorysystem.entities.Role;
 import com.bezy.inventorysystem.mappers.UserMapper;
 import com.bezy.inventorysystem.dtos.RegisterUserRequest;
 import com.bezy.inventorysystem.dtos.UpdateUserRequest;
@@ -7,19 +8,24 @@ import com.bezy.inventorysystem.dtos.UserDto;
 import com.bezy.inventorysystem.entities.User;
 import com.bezy.inventorysystem.repositories.UserRepository;
 import com.bezy.inventorysystem.services.UserService;
+import com.fasterxml.jackson.core.Base64Variant;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.config.authentication.PasswordEncoderParser;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/v1")
-public class UserController {
+public class  UserController {
     private final UserService userService;
+    private final PasswordEncoder passwordEncoder;
 
-    public UserController(UserRepository userRepository, UserMapper userMapper, UserService userService) {
+    public UserController(UserRepository userRepository, UserMapper userMapper, UserService userService, PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
         this.userMapper = userMapper;
         this.userService = userService;
+        this.passwordEncoder = passwordEncoder;
     }
 
     private final UserRepository userRepository;
@@ -29,7 +35,21 @@ public class UserController {
     public ResponseEntity<?> registerUser(
             @Valid @RequestBody RegisterUserRequest request
     ){
-        userService.createUser(request);
+        if(userRepository.findByUsername(request.getUsername()).isPresent()){
+            return ResponseEntity.badRequest().body("Username already exists");
+        }
+
+        if(userRepository.existsByEmail(request.getEmail())){
+            return ResponseEntity.badRequest().body("Email already exists");
+        }
+
+        User user = new User();
+        user.setUsername(request.getUsername());
+        user.setPassword(passwordEncoder.encode(request.getPassword()));
+        user.setEmail(request.getEmail());
+        user.setId(request.getId());
+        user.setRole(request.getRole());
+        userRepository.save(user);
         return ResponseEntity.ok("User has been created successfully!");
     }
 
@@ -38,7 +58,12 @@ public class UserController {
             @PathVariable Long id,
             @RequestBody UpdateUserRequest request
     ){
-        userService.updateUser(id, request);
+        var user = userRepository.findById(id).orElse(null);
+        if(user == null){
+            return ResponseEntity.ok("User not found!");
+        }
+        userMapper.update(request, user);
+        userRepository.save(user);
         return ResponseEntity.ok("User has been updated successfully!");
     }
 

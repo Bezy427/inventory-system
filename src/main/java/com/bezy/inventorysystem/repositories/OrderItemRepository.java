@@ -1,4 +1,7 @@
 package com.bezy.inventorysystem.repositories;
 
-public interface OrderItemRepository extends org.springframework.data.jpa.repository.JpaRepository<com.bezy.inventorysystem.entities.OrderItem, java.lang.Long> {
-  }
+import com.bezy.inventorysystem.entities.OrderItem;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface OrderItemRepository extends JpaRepository<OrderItem, Long> {
+}

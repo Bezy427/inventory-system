@@ -1,4 +1,7 @@
 package com.bezy.inventorysystem.repositories;
 
-public interface CustomerRepository extends org.springframework.data.jpa.repository.JpaRepository<com.bezy.inventorysystem.entities.Customer, java.lang.Long> {
-  }
+import com.bezy.inventorysystem.entities.Customer;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CustomerRepository extends JpaRepository<Customer, Long> {
+}

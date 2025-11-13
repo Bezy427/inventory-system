@@ -1,4 +1,7 @@
 package com.bezy.inventorysystem.repositories;
 
-public interface PurchaseRepository extends org.springframework.data.jpa.repository.JpaRepository<com.bezy.inventorysystem.entities.Purchase, java.lang.Long> {
-  }
+import com.bezy.inventorysystem.entities.Purchase;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface PurchaseRepository extends JpaRepository<Purchase, Long> {
+}
