@@ -3,7 +3,6 @@ package com.bezy.inventorysystem.controllers;
 import com.bezy.inventorysystem.config.JwtConfig;
 import com.bezy.inventorysystem.dtos.JwtResponse;
 import com.bezy.inventorysystem.dtos.LoginRequest;
-import com.bezy.inventorysystem.dtos.PurchaseMapper;
 import com.bezy.inventorysystem.dtos.UserDto;
 import com.bezy.inventorysystem.mappers.UserMapper;
 import com.bezy.inventorysystem.repositories.UserRepository;
