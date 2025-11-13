@@ -1,12 +1,10 @@
 package com.bezy.inventorysystem.services;
 
 import com.bezy.inventorysystem.config.JwtConfig;
-import com.bezy.inventorysystem.entities.Role;
 import com.bezy.inventorysystem.entities.User;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.security.Keys;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
