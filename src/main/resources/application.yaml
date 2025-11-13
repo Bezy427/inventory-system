@@ -3,8 +3,8 @@ spring:
     name: inventory-system
   datasource:
     url: jdbc:postgresql://localhost:5432/inventory
-    username: anopa
-    password: rusamu2003!!
+    username: username
+    password: yourpassword
   jpa:
     show-sql: true
     hibernate:

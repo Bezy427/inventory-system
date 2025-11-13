@@ -3,8 +3,8 @@ services:
     image: postgres:15
     container_name: inventory
     environment:
-      POSTGRES_USER: anopa
-      POSTGRES_PASSWORD: rusamu2003!!
+      POSTGRES_USER: dbuser
+      POSTGRES_PASSWORD: yourdbpassword
       POSTGRES_DB: inventory
     ports:
       - "5432:5432"
@@ -17,8 +17,8 @@ services:
     image: dpage/pgadmin4
     container_name: pgadmin_ui
     environment:
-        PGADMIN_DEFAULT_EMAIL: admin@bezy.com
-        PGADMIN_DEFAULT_PASSWORD: admin123
+        PGADMIN_DEFAULT_EMAIL: createemail
+        PGADMIN_DEFAULT_PASSWORD: createpassword
     ports:
         - "5050:80"
     depends_on:
@@ -32,8 +32,8 @@ services:
     - postgres
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/inventory
-      SPRING_DATASOURCE_USERNAME: anopa
-      SPRING_DATASOURCE_PASSWORD: rusamu2003!!
+      SPRING_DATASOURCE_USERNAME: username
+      SPRING_DATASOURCE_PASSWORD: password
     ports:
       - "8080:8080"
 
