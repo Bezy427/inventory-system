@@ -3,7 +3,6 @@ package com.bezy.inventorysystem.controllers;
 import com.bezy.inventorysystem.dtos.OrderItemDto;
 import com.bezy.inventorysystem.dtos.RegisterOrderItemRequest;
 import com.bezy.inventorysystem.dtos.UpdateOrderItemRequest;
-import com.bezy.inventorysystem.entities.OrderItem;
 import com.bezy.inventorysystem.mappers.OrderItemMapper;
 import com.bezy.inventorysystem.repositories.OrderItemRepository;
 import com.bezy.inventorysystem.services.OrderItemService;

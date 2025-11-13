@@ -1,6 +1,5 @@
 package com.bezy.inventorysystem.controllers;
 
-import com.bezy.inventorysystem.entities.Role;
 import com.bezy.inventorysystem.mappers.UserMapper;
 import com.bezy.inventorysystem.dtos.RegisterUserRequest;
 import com.bezy.inventorysystem.dtos.UpdateUserRequest;
@@ -8,10 +7,8 @@ import com.bezy.inventorysystem.dtos.UserDto;
 import com.bezy.inventorysystem.entities.User;
 import com.bezy.inventorysystem.repositories.UserRepository;
 import com.bezy.inventorysystem.services.UserService;
-import com.fasterxml.jackson.core.Base64Variant;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.config.authentication.PasswordEncoderParser;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 

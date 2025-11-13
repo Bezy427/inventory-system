@@ -1,9 +1,7 @@
 package com.bezy.inventorysystem.controllers;
 
 import com.bezy.inventorysystem.dtos.RegisterStockMovementRequest;
-import com.bezy.inventorysystem.dtos.StockMovementDto;
 import com.bezy.inventorysystem.dtos.UpdateStockMovementRequest;
-import com.bezy.inventorysystem.entities.StockMovement;
 import com.bezy.inventorysystem.entities.Type;
 import com.bezy.inventorysystem.mappers.StockMovementMapper;
 import com.bezy.inventorysystem.repositories.StockMovementRepository;

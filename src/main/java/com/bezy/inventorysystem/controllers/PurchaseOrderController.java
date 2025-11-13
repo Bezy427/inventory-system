@@ -3,7 +3,6 @@ package com.bezy.inventorysystem.controllers;
 import com.bezy.inventorysystem.dtos.PurchaseOrderDto;
 import com.bezy.inventorysystem.dtos.RegisterPurchaseOrderRequest;
 import com.bezy.inventorysystem.dtos.UpdatePurchaseOrderRequest;
-import com.bezy.inventorysystem.entities.PurchaseOrder;
 import com.bezy.inventorysystem.mappers.PurchaseOrderMapper;
 import com.bezy.inventorysystem.repositories.PurchaseOrderRepository;
 import com.bezy.inventorysystem.services.PurchaseOrderService;

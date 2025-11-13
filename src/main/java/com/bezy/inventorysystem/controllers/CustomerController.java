@@ -3,14 +3,12 @@ package com.bezy.inventorysystem.controllers;
 import com.bezy.inventorysystem.dtos.CustomerDto;
 import com.bezy.inventorysystem.dtos.RegisterCustomerRequest;
 import com.bezy.inventorysystem.dtos.UpdateCustomerRequest;
-import com.bezy.inventorysystem.entities.Customer;
 import com.bezy.inventorysystem.mappers.CustomerMapper;
 import com.bezy.inventorysystem.repositories.CustomerRepository;
 import com.bezy.inventorysystem.services.CustomerService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/v1")

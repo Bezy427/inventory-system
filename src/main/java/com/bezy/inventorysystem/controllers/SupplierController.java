@@ -2,7 +2,6 @@ package com.bezy.inventorysystem.controllers;
 
 import com.bezy.inventorysystem.dtos.RegisterSupplierRequest;
 import com.bezy.inventorysystem.dtos.SupplierDto;
-import com.bezy.inventorysystem.entities.Supplier;
 import com.bezy.inventorysystem.mappers.SupplierMapper;
 import com.bezy.inventorysystem.repositories.SupplierRepository;
 import com.bezy.inventorysystem.repositories.UpdateSupplierRequest;

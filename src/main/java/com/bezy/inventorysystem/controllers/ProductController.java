@@ -2,14 +2,12 @@ package com.bezy.inventorysystem.controllers;
 
 import com.bezy.inventorysystem.dtos.RegisterProductRequest;
 import com.bezy.inventorysystem.dtos.UpdateProductRequest;
-import com.bezy.inventorysystem.entities.Product;
 import com.bezy.inventorysystem.mappers.ProductMapper;
 import com.bezy.inventorysystem.repositories.ProductRepository;
 import com.bezy.inventorysystem.services.ProductService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1")

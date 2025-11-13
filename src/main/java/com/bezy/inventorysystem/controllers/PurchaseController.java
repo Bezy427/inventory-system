@@ -4,8 +4,6 @@ import com.bezy.inventorysystem.dtos.PurchaseDto;
 import com.bezy.inventorysystem.dtos.PurchaseMapper;
 import com.bezy.inventorysystem.dtos.RegisterPurchaseRequest;
 import com.bezy.inventorysystem.dtos.UpdatePurchaseRequest;
-import com.bezy.inventorysystem.entities.Purchase;
-import com.bezy.inventorysystem.mappers.CategoryMapper;
 import com.bezy.inventorysystem.repositories.PurchaseRepository;
 import com.bezy.inventorysystem.services.PurchaseService;
 import jakarta.validation.Valid;
