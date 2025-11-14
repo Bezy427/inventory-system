@@ -2,13 +2,10 @@ package com.bezy.inventorysystem.services;
 
 import com.bezy.inventorysystem.dtos.PurchaseMapper;
 import com.bezy.inventorysystem.dtos.RegisterPurchaseRequest;
-import com.bezy.inventorysystem.dtos.UpdatePurchaseOrderRequest;
 import com.bezy.inventorysystem.dtos.UpdatePurchaseRequest;
 import com.bezy.inventorysystem.entities.Purchase;
-import com.bezy.inventorysystem.entities.PurchaseOrder;
 import com.bezy.inventorysystem.repositories.PurchaseRepository;
 import jakarta.validation.Valid;
-import org.antlr.v4.runtime.misc.LogManager;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
