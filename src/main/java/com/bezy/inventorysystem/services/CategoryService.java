@@ -1,15 +1,11 @@
 package com.bezy.inventorysystem.services;
 
-import com.bezy.inventorysystem.dtos.PurchaseMapper;
 import com.bezy.inventorysystem.dtos.RegisterCategoryRequest;
-import com.bezy.inventorysystem.dtos.RegisterCustomerRequest;
 import com.bezy.inventorysystem.dtos.UpdateCategoryRequest;
 import com.bezy.inventorysystem.entities.Category;
 import com.bezy.inventorysystem.mappers.CategoryMapper;
 import com.bezy.inventorysystem.repositories.CategoryRepository;
 import jakarta.validation.Valid;
-import org.antlr.v4.runtime.misc.LogManager;
-import org.hibernate.sql.Update;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
