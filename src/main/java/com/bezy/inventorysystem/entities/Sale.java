@@ -2,7 +2,6 @@ package com.bezy.inventorysystem.entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import lombok.ToString;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
