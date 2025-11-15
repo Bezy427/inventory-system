@@ -1,6 +1,5 @@
 package com.bezy.inventorysystem.dtos;
 
-import com.bezy.inventorysystem.entities.Category;
 import com.bezy.inventorysystem.entities.PurchaseOrder;
 import com.bezy.inventorysystem.entities.Supplier;
 import lombok.Data;

@@ -20,12 +20,14 @@ import java.math.BigDecimal;
 public class SaleService {
     private final ProductRepository productRepository;
     private final SaleItemService saleItemService;
-    private SaleRepository saleRepository;
-    private SaleMapper saleMapper;
+    private final SaleRepository saleRepository;
+    private final SaleMapper saleMapper;
 
-    public SaleService(ProductRepository productRepository, SaleItemService saleItemService) {
+    public SaleService(ProductRepository productRepository, SaleItemService saleItemService, SaleRepository saleRepository, SaleMapper saleMapper) {
         this.productRepository = productRepository;
         this.saleItemService = saleItemService;
+        this.saleRepository = saleRepository;
+        this.saleMapper = saleMapper;
     }
 
     public ResponseEntity<?> createSale(

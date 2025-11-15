@@ -4,7 +4,6 @@ import com.bezy.inventorysystem.entities.Role;
 import jakarta.validation.constraints.AssertTrue;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 @Data
