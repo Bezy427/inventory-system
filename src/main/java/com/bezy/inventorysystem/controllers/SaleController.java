@@ -15,11 +15,12 @@ import org.springframework.web.bind.annotation.*;
 public class SaleController {
     private final SaleRepository saleRepository;
     private final SaleService saleService;
-    private SaleMapper saleMapper;
+    private final SaleMapper saleMapper;
 
-    public SaleController(SaleRepository saleRepository, SaleService saleService) {
+    public SaleController(SaleRepository saleRepository, SaleService saleService, SaleMapper saleMapper) {
         this.saleRepository = saleRepository;
         this.saleService = saleService;
+        this.saleMapper = saleMapper;
     }
 
     @PostMapping("/sales")

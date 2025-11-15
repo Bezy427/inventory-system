@@ -3,7 +3,6 @@ package com.bezy.inventorysystem.controllers;
 import com.bezy.inventorysystem.dtos.RegisterSaleItemRequest;
 import com.bezy.inventorysystem.dtos.SaleItemDto;
 import com.bezy.inventorysystem.dtos.UpdateSaleItemRequest;
-import com.bezy.inventorysystem.entities.SaleItem;
 import com.bezy.inventorysystem.mappers.SaleItemMapper;
 import com.bezy.inventorysystem.repositories.SaleItemRepository;
 import com.bezy.inventorysystem.services.SaleItemService;
