@@ -17,11 +17,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 @Service
 public class StockMovementService {
     private final ProductRepository productRepository;
-    private StockMovementRepository stockMovementRepository;
-    private StockMovementMapper stockMovementMapper;
+    private final StockMovementRepository stockMovementRepository;
+    private final StockMovementMapper stockMovementMapper;
 
-    public StockMovementService(ProductRepository productRepository) {
+    public StockMovementService(ProductRepository productRepository, StockMovementRepository stockMovementRepository, StockMovementMapper stockMovementMapper) {
         this.productRepository = productRepository;
+        this.stockMovementRepository = stockMovementRepository;
+        this.stockMovementMapper = stockMovementMapper;
     }
 
     public ResponseEntity<?> createStockMovement(
