@@ -13,8 +13,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 @Service
 public class PurchaseOrderService {
-    private PurchaseOrderRepository purchaseOrderRepository;
-    private PurchaseOrderMapper purchaseOrderMapper;
+    private final PurchaseOrderRepository purchaseOrderRepository;
+    private final PurchaseOrderMapper purchaseOrderMapper;
+
+    public PurchaseOrderService(PurchaseOrderRepository purchaseOrderRepository, PurchaseOrderMapper purchaseOrderMapper) {
+        this.purchaseOrderRepository = purchaseOrderRepository;
+        this.purchaseOrderMapper = purchaseOrderMapper;
+    }
 
     public ResponseEntity<?> createPurchaseOrder(
             @Valid @RequestBody RegisterPurchaseOrderRequest request
