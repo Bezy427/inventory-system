@@ -12,8 +12,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 @Service
 public class CustomerService {
-    private CustomerRepository customerRepository;
-    private CustomerMapper customerMapper;
+    private final CustomerRepository customerRepository;
+    private final CustomerMapper customerMapper;
+
+    public CustomerService(CustomerRepository customerRepository, CustomerMapper customerMapper) {
+        this.customerRepository = customerRepository;
+        this.customerMapper = customerMapper;
+    }
 
     public ResponseEntity<?> registerCustomer(
             @RequestBody RegisterCustomerRequest request
