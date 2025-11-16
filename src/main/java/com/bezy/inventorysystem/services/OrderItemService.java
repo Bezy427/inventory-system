@@ -12,8 +12,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 @Service
 public class OrderItemService {
-    private OrderItemRepository orderItemRepository;
-    private OrderItemMapper orderItemMapper;
+    private final OrderItemRepository orderItemRepository;
+    private final OrderItemMapper orderItemMapper;
+
+    public OrderItemService(OrderItemRepository orderItemRepository, OrderItemMapper orderItemMapper) {
+        this.orderItemRepository = orderItemRepository;
+        this.orderItemMapper = orderItemMapper;
+    }
 
     public ResponseEntity<?> createOrderItem(
             @RequestBody RegisterOrderItemRequest request
