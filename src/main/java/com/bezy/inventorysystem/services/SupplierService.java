@@ -12,8 +12,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 @Service
 public class SupplierService {
-    private SupplierRepository supplierRepository;
-    private SupplierMapper supplierMapper;
+    private final SupplierRepository supplierRepository;
+    private final SupplierMapper supplierMapper;
+
+    public SupplierService(SupplierRepository supplierRepository, SupplierMapper supplierMapper) {
+        this.supplierRepository = supplierRepository;
+        this.supplierMapper = supplierMapper;
+    }
 
     public ResponseEntity<?> createSupplier(
             @RequestBody RegisterSupplierRequest request

@@ -12,8 +12,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 @Service
 public class SaleItemService {
-    private SaleItemRepository saleItemRepository;
-    private SaleItemMapper saleItemMapper;
+    private final SaleItemRepository saleItemRepository;
+    private final SaleItemMapper saleItemMapper;
+
+    public SaleItemService(SaleItemRepository saleItemRepository, SaleItemMapper saleItemMapper) {
+        this.saleItemRepository = saleItemRepository;
+        this.saleItemMapper = saleItemMapper;
+    }
 
     public ResponseEntity<?> createSaleItem(
             @RequestBody RegisterSaleItemRequest request
