@@ -1,9 +1,7 @@
 package com.bezy.inventorysystem.mappers;
 
-import com.bezy.inventorysystem.dtos.PurchaseDto;
 import com.bezy.inventorysystem.dtos.RegisterSupplierRequest;
 import com.bezy.inventorysystem.dtos.SupplierDto;
-import com.bezy.inventorysystem.entities.Purchase;
 import com.bezy.inventorysystem.entities.Supplier;
 import com.bezy.inventorysystem.repositories.UpdateSupplierRequest;
 import org.mapstruct.Mapper;
